@@ -1,0 +1,69 @@
+.token_main_container{
+    width: 100%;
+    background-repeat: repeat;
+    /* height: 100vh; */
+}
+.bkgimg_container{
+    background-repeat: repeat;
+}
+.bkgimg_container > img{
+    position: fixed;
+}
+.bkgimg{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+}
+.token_child_container{
+    position: absolute;
+    width: 80vw;
+    right: 0;
+    top: 0;
+}
+.top_token_section{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 8vh;
+}
+
+.searchBox{
+    width: 25vw;
+    height: 3.5vh;
+    padding: 1.2vh;
+    left: 9vh;
+    padding-left: 2.7vh;
+    font-size: 2vh ;
+    border: 1.5px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.014);
+    border-radius: 20px;
+    position: absolute;
+    color: #ffffff;
+}
+input:focus{
+    outline: none;
+}
+.searchIcon{
+    /* top: 6vh; */
+    left: 5vh;
+    position: relative;
+    font-size: 4vh;
+    color: #ffffff;
+    margin-left: 33%;
+}
+.token_button{
+    margin-right: 5vh;
+    width: 15vh;
+    height: 7vh;
+    border: none;
+    background-color: red;
+}
+.data_token_section{
+    display: flex;
+    width: 100%;
+    overflow: hidden !important;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
