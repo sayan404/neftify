@@ -55,55 +55,34 @@ const Tokenaddress = () => {
       fetchFilteredData()
     }
   }, [inputText])
-return (
-  <div className='token_main_container'>
-   {loading ? <div className='loader'>
+  return (
+    <div className='token_main_container'>
+      {loading ? <div className='loader'>
         <BeatLoader color="#07a1d9" size={20} style={{ display: "block", margin: "0 auto" }} />
       </div>
         :
         <>
-    <div className='bkgimg_container'>
-      <img className="bkgimg" src={bkgimg} alt='bkgimg' />
-    </div>
-    <div className='token_child_container'>
-      <div className='top_token_section'>
-        <input
-          type='text'
-          value={inputText}
-          className='searchBox'
-          placeholder='Search'
-          onChange={inputHandler}
-        />
-        <AiOutlineSearch className='searchIcon' />
-        <button className='token_button' ></button>
-      </div>
-      <div className='data_token_section'>
-      {
-              filterData != '' ?
-                <>
-                  {
-                    filterData.map((pair, idx) => (
-                      <TokenCard key={idx}
-                        symbol={pair.baseToken.symbol}
-                        dexId={pair.dexId}
-                        pairAddress={pair.pairAddress[0] + pair.pairAddress[1] + pair.pairAddress[2] + pair.pairAddress[3]}
-                        name={pair.baseToken.name}
-                        symbol_base={pair.baseToken.symbol}
-                        address_base={pair.baseToken.address[0] + pair.baseToken.address[1] + pair.baseToken.address[2] + pair.baseToken.address[3]}
-                        name_quote={pair.quoteToken.name}
-                        symbol_quote={pair.quoteToken.symbol}
-                        address_quote={pair.quoteToken.address[0] + pair.quoteToken.address[1] + pair.quoteToken.address[2] + pair.quoteToken.address[3]}
-                        price_native={pair.priceNative}
-                        priceUSD={pair.priceUsd}
-                      />
-                    ))
-                  }
-                </>
-                :
-                <>
-                  {
-                    data ? <>{
-                      data.map((pair, idx) => (
+          <div className='bkgimg_container'>
+            <img className="bkgimg" src={bkgimg} alt='bkgimg' />
+          </div>
+          <div className='token_child_container'>
+            <div className='top_token_section'>
+              <input
+                type='text'
+                value={inputText}
+                className='searchBox'
+                placeholder='Search'
+                onChange={inputHandler}
+              />
+              <AiOutlineSearch className='searchIcon' />
+              <button className='token_button' ></button>
+            </div>
+            <div className='data_token_section'>
+              {
+                filterData != '' ?
+                  <>
+                    {
+                      filterData.map((pair, idx) => (
                         <TokenCard key={idx}
                           symbol={pair.baseToken.symbol}
                           dexId={pair.dexId}
@@ -116,20 +95,43 @@ return (
                           address_quote={pair.quoteToken.address[0] + pair.quoteToken.address[1] + pair.quoteToken.address[2] + pair.quoteToken.address[3]}
                           price_native={pair.priceNative}
                           priceUSD={pair.priceUsd}
-
                         />
-                      ))}
-                    </> : <>Something Went Wrong</>
-                  }
-                </>
+                      ))
+                    }
+                  </>
+                  :
+                  <>
+                    {
+                      data ? <>{
+                        data.map((pair, idx) => (
+                          <TokenCard key={idx}
+                            symbol={pair.baseToken.symbol}
+                            dexId={pair.dexId}
+                            pairAddress={pair.pairAddress[0] + pair.pairAddress[1] + pair.pairAddress[2] + pair.pairAddress[3]}
+                            name={pair.baseToken.name}
+                            symbol_base={pair.baseToken.symbol}
+                            address_base={pair.baseToken.address[0] + pair.baseToken.address[1] + pair.baseToken.address[2] + pair.baseToken.address[3]}
+                            name_quote={pair.quoteToken.name}
+                            symbol_quote={pair.quoteToken.symbol}
+                            address_quote={pair.quoteToken.address[0] + pair.quoteToken.address[1] + pair.quoteToken.address[2] + pair.quoteToken.address[3]}
+                            price_native={pair.priceNative}
+                            priceUSD={pair.priceUsd}
+
+                          />
+                        ))}
+                      </> : <>Something Went Wrong</>
+                    }
+                  </>
+              }
+            </div>
+            {
+              filterData != '' ? <Bottom /> : <></>
             }
-      </div>
-      <Bottom />
+          </div>
+        </>
+      }
     </div>
-    </>
-   }
-  </div>
-)
+  )
 }
 
 export default Tokenaddress

@@ -60,9 +60,6 @@ const Tokenaddress = () => {
 
   }, [inputText])
 
-  // console.log(filterData);
-  // console.log(data);
-  // console.log(inputText);
   return (
     <div className='token_main_container'>
       {loading ? <div className='loader'>
@@ -132,7 +129,10 @@ const Tokenaddress = () => {
                   </>
               }
             </div>
-            <Bottom />
+            {
+              filterData != '' ?<Bottom />:<></>
+            }
+
           </div>
         </>
       }
