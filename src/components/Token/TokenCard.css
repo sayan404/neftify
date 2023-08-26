@@ -1,5 +1,5 @@
 .token_card{
-    width: 13vmax;
+    width: 25vmin;
     display: flex;
     flex-direction: column;
     color: #ffffff;
@@ -29,17 +29,19 @@
 .span_r{
     width: 50%;
 }
+.info_logo_container{
+    display: flex;
+    justify-content: end;
+}
 .info_logo{
     width: 8vh;
     height: 8vh;
     font-size: 5vh;
+    background-color: pink;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: pink;
-    margin-left: 10vmax;
-    border-radius: 100%;
 }
 .tb{
     margin-top: 2.4vh ;

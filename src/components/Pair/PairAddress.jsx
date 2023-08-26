@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './PairAddress.css'
+import '../Token/Tokenaddress.css'
 import bkgimg from '../../assets/bkgimg.jpg'
 import { TbHexagon3D } from 'react-icons/tb'
 import { AiOutlineSearch } from 'react-icons/ai'

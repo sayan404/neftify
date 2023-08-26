@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
     position: fixed;
     height: 100%;
     width: 20vw;
@@ -6,43 +6,113 @@
     z-index: 2;
     top: 0;
     border-top-right-radius: 40px;
+    transition: all 0.3s ease;
 }
-.sidebar > p:first-child {
+
+.sidebar>p:first-child {
     width: 100%;
     text-align: center;
 }
-.logo_icon{
+
+.logo_icon {
     font-size: 4.3vh;
     padding-right: 2vh;
     color: white;
 }
-.logo
-{
+
+.logo {
     width: 18vw;
-    padding: 5vh 0 5vh 2vw;    
+    padding: 5vh 0 5vh 2vw;
     font-size: 4vh;
     font-style: italic;
     font-weight: bolder;
     color: #F30050;
     display: flex;
-    justify-content:left;
-    text-align:left;
+    justify-content: left;
+    text-align: left;
 }
+
 .token_adrs_txt,
-.pair_adrs_txt{
+.pair_adrs_txt {
     width: 18vw;
-    padding: 0.8vw 0 .8em 2vw;    
-    color:white ;
+    padding: 0.8vw 0 .8em 2vw;
+    color: white;
     font-size: 2.5vh;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
-    justify-content:left;
-    text-align:left;
+    justify-content: left;
+    text-align: left;
     cursor: pointer;
 }
+
 .spcl {
     font-size: 3vh;
 }
-.focus{
+
+.focus {
     background-color: #F30050;
+}
+
+.sidebar.open {
+    width: 100px;
+    /* Adjust as needed for the open width */
+    z-index: 5;
+    color: white;
+    background-color: white;
+}
+
+.menu-toggle {
+    display: none;
+    /* Hide by default */
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+    background-color: #292929;
+    /* Use the background color of your sidebar */
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 0;
+        overflow-x: hidden;
+        z-index: 2;
+        color: white;
+        background-color: white;
+    }
+
+    .sidebar.open {
+        /* margin-top: 20px; */
+        width: 250px;
+        z-index: 2;
+        color: white;
+        background-color: #292929;
+    }
+
+    .menu-toggle {
+        display: flex;
+        /* Show the hamburger menu */
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        z-index: 5;
+        background-color: rgb(171, 82, 82);
+    }
+
+    .token_adrs_txt,
+    .pair_adrs_txt {
+        width: 45vw;
+        padding: 0.8vw 0 .8em 2vw;
+        color: white;
+        font-size: 2.5vh;
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        cursor: pointer;
+    }
 }

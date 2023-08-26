@@ -132,7 +132,7 @@ const Tokenaddress = () => {
               }
             </div>
             {
-              filterData != '' ?<Bottom />:<p className='not_found'>Data Not Found</p>
+              filterData != '' && data!= '' ?<Bottom />:<p className='not_found'>Data Not Found</p>
             }
 
           </div>
