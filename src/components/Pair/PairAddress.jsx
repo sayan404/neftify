@@ -6,7 +6,8 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import Bottom from '../Bottom/Bottom'
 import axios from 'axios'
 import TokenCard from '../Token/TokenCard'
-// import TokenCard from './TokenCard'
+import BeatLoader from "react-spinners/BeatLoader";
+
 const Tokenaddress = () => {
 
   const [inputText, setInputText] = useState('');
@@ -56,6 +57,11 @@ const Tokenaddress = () => {
   }, [inputText])
 return (
   <div className='token_main_container'>
+   {loading ? <div className='loader'>
+        <BeatLoader color="#07a1d9" size={20} style={{ display: "block", margin: "0 auto" }} />
+      </div>
+        :
+        <>
     <div className='bkgimg_container'>
       <img className="bkgimg" src={bkgimg} alt='bkgimg' />
     </div>
@@ -120,6 +126,8 @@ return (
       </div>
       <Bottom />
     </div>
+    </>
+   }
   </div>
 )
 }

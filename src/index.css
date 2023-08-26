@@ -1,7 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    width: 11px;               /* width of the entire scrollbar */
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 30px;       /* roundness of the scroll thumb */
+    border: 1.2px solid rgb(209, 239, 243);  /* creates padding around scroll thumb */
+  }
