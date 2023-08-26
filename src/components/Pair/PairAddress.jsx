@@ -126,9 +126,13 @@ const Tokenaddress = () => {
                   </>
               }
             </div>
-            {
-              filterData != '' ?<Bottom />:<p className='not_found'>Data Not Found</p>
-            }
+              <>{
+                inputText ?
+                <>{
+                  filterData != '' ?<Bottom />:<p className='not_found'>Data Not Found</p>
+                } </>: <Bottom /> 
+              }
+              </>
           </div>
         </>
       }
