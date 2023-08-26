@@ -71,13 +71,14 @@
     /* Use the background color of your sidebar */
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     .sidebar {
         width: 0;
         overflow-x: hidden;
         z-index: 2;
         color: white;
         background-color: white;
+        border-radius: 0;
     }
 
     .sidebar.open {
@@ -90,11 +91,12 @@
 
     .menu-toggle {
         display: flex;
-        /* Show the hamburger menu */
         flex-direction: column;
         padding: 15px;
     }
-
+    .open {
+        padding-top: 10vh;
+    }
     .bar {
         width: 25px;
         height: 3px;
@@ -105,14 +107,21 @@
 
     .token_adrs_txt,
     .pair_adrs_txt {
-        width: 45vw;
-        padding: 0.8vw 0 .8em 2vw;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sidebar.open {
+        /* margin-top: 20px; */
+        width: 100vw;
+        z-index: 2;
         color: white;
-        font-size: 2.5vh;
-        font-family: 'Times New Roman', Times, serif;
-        display: flex;
-        justify-content: left;
-        text-align: left;
-        cursor: pointer;
+        background-color: #292929;
+    }
+    .token_adrs_txt,
+    .pair_adrs_txt {
+        width: 100vw;
+        padding: 1vh;
     }
 }

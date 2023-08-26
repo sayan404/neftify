@@ -49,3 +49,15 @@
 .bi{
     margin-top: 5vh;
 }
+
+@media screen and (max-width: 600px) {
+    .token_card{
+        width: 37vmin;
+    }
+}
+@media screen and (max-width: 370px) {
+    .token_card{
+        width: 70vmin;
+        padding: 4vmax 4vmax;
+    }
+}

@@ -78,6 +78,7 @@ const Tokenaddress = () => {
               <AiOutlineSearch className='searchIcon' />
               <ConnectWallet />
             </div>
+            <p className='_text'>Pair Address</p>
             <div className='data_token_section'>
               {
                 filterData != '' ?

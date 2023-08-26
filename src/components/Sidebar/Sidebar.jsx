@@ -4,13 +4,15 @@ import { TbHexagonLetterN } from 'react-icons/tb';
 import { GiNestedHexagons } from 'react-icons/gi';
 import { TbHexagons } from 'react-icons/tb';
 import { useNavigate } from 'react-router-dom';
-
+import { useLocation } from 'react-router-dom';
 const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [token, setToken] = useState(true);
   const [pair, setPair] = useState(false);
   const navigate = useNavigate();
-
+  const { pathname } = useLocation()
+  let txt = pathname.slice(1)
+  console.log(txt);
   const tokenClickHandler = () => {
     setPair(false);
     setToken(true);
@@ -40,14 +42,14 @@ const Sidebar = () => {
         NFTify
       </p>
       <p
-        className={token ? 'token_adrs_txt focus' : 'token_adrs_txt'}
+        className={txt==='token' ? 'token_adrs_txt focus' : 'token_adrs_txt'}
         onClick={tokenClickHandler}
       >
         <TbHexagons className='logo_icon spcl' />
         Token Address
       </p>
       <p
-        className={pair ? 'pair_adrs_txt focus' : 'pair_adrs_txt'}
+        className={txt==='pair' ? 'pair_adrs_txt focus' : 'pair_adrs_txt'}
         onClick={pairClickHandler}
       >
         <GiNestedHexagons className='logo_icon spcl' />

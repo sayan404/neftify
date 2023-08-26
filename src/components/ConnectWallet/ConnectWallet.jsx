@@ -41,7 +41,7 @@ const ConnectWallet = () => {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-      <div className='token_button' ><ConnectButton /></div>
+      <div className='token_button' ><ConnectButton className='token_button_custom' /></div>
       </RainbowKitProvider>
     </WagmiConfig>
   )

@@ -81,9 +81,9 @@ const Tokenaddress = () => {
                 onChange={inputHandler}
               />
               <AiOutlineSearch className='searchIcon' />
-              <ConnectWallet />
-              
-            </div>
+              <ConnectWallet className='connect_wallet_pos'/>
+              </div>
+              <p className='_text'>Token Address</p>
             <div className='data_token_section'>
               {
                 filterData != '' ?
