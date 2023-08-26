@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Tokenaddress.css'
 import bkgimg from '../../assets/bkgimg.jpg'
-import { TbHexagon3D } from 'react-icons/tb'
 import { AiOutlineSearch } from 'react-icons/ai'
 import Bottom from '../Bottom/Bottom'
 import axios from 'axios'
 import TokenCard from './TokenCard'
 import BeatLoader from "react-spinners/BeatLoader";
+import ConnectWallet from '../ConnectWallet/ConnectWallet'
+
 
 const Tokenaddress = () => {
 
@@ -80,7 +81,8 @@ const Tokenaddress = () => {
                 onChange={inputHandler}
               />
               <AiOutlineSearch className='searchIcon' />
-              <button className='token_button' ></button>
+              <ConnectWallet />
+              
             </div>
             <div className='data_token_section'>
               {

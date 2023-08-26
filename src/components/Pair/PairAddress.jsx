@@ -7,6 +7,7 @@ import Bottom from '../Bottom/Bottom'
 import axios from 'axios'
 import TokenCard from '../Token/TokenCard'
 import BeatLoader from "react-spinners/BeatLoader";
+import ConnectWallet from '../ConnectWallet/ConnectWallet'
 
 const Tokenaddress = () => {
 
@@ -75,7 +76,7 @@ const Tokenaddress = () => {
                 onChange={inputHandler}
               />
               <AiOutlineSearch className='searchIcon' />
-              <button className='token_button' ></button>
+              <ConnectWallet />
             </div>
             <div className='data_token_section'>
               {

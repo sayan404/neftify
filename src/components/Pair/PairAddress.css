@@ -70,13 +70,6 @@ input:focus {
     margin-left: 33%;
 }
 
-.token_button {
-    margin-right: 5vh;
-    width: 15vh;
-    height: 7vh;
-    border: none;
-    background-color: red;
-}
 
 .data_token_section {
     display: flex;
